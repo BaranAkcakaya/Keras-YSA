@@ -33,11 +33,6 @@ for input_t in inputs:
 
 final_output_sequence = np.concatenate(successive_outputs, axis=0)
 
-"""En basit hali ile Yinelemeli Sinir Ağları (RNN) her döngü adımında bir önceki adımın değerini kullanmaktadır. 
-
-![Simple RNN](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99E7EA485A9E2CBE17)
-"""
-
 output_t = np.tanh(np.dot(W, input_t) + np.dot(U, state_t) + b)
 
 output_t
